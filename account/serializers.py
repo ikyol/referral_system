@@ -1,8 +1,9 @@
+from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
 
 
 class PhoneVerificationSerializer(serializers.Serializer):
-    phone_number = serializers.CharField()
+    phone_number = PhoneNumberField()
 
 
 class CodeVerificationSerializer(serializers.Serializer):
@@ -14,7 +15,7 @@ class UserSerializer(PhoneVerificationSerializer):
 
 
 class UserProfileSerializer(serializers.Serializer):
-    phone_number = serializers.CharField()
+    phone_number = PhoneNumberField()
     invite_code = serializers.CharField()
     activated_invite_code = serializers.CharField()
     invited_users = UserSerializer(many=True)

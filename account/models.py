@@ -3,10 +3,11 @@ import string
 
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class User(AbstractBaseUser):
-    phone_number = models.CharField(unique=True, max_length=15)
+    phone_number = PhoneNumberField(unique=True, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     registered_at = models.DateTimeField(auto_now_add=True)
