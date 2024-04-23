@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # libs
     'rest_framework.authtoken',
     'drf_yasg',
+    "phonenumber_field",
 
     # apps
     'account',

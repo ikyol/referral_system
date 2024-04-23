@@ -1,19 +1,19 @@
 [tool.poetry]
-name = "poetry"
+name = "referral-system"
 version = "0.1.0"
-description = "Referral system"
-authors = ["ikyol <krakem.nc@gmail.com>"]
+description = ""
+authors = ["ikyol <aikyol.dev@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
-django = "^5.0.4"
+python = "3.8.10"
+django = "4"
 psycopg2-binary = "^2.9.9"
 djangorestframework = "^3.15.1"
-python-decouple = "^3.8"
-drf-yasg = "^1.21.7"
 flake8 = "^7.0.0"
 isort = "^5.13.2"
+python-decouple = "^3.8"
+drf-yasg = "^1.21.7"
 django-phonenumber-field = {extras = ["phonenumbers"], version = "^7.3.0"}
 
 
